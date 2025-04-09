@@ -1,0 +1,614 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MS Sans Serif', 'Pixelated MS Sans Serif', Arial, sans-serif;
+}
+
+body {
+    background-color: #008080; /* Aquele verde-azulado icônico do Win95 */
+    overflow: hidden;
+    height: 100vh;
+    cursor: default;
+}
+
+/* Barra de tarefas */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background-color: #c0c0c0;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    z-index: 1000;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    height: 100%;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #7e7e7e;
+    border-bottom: 1px solid #7e7e7e;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.start-button:active {
+    border-top: 1px solid #7e7e7e;
+    border-left: 1px solid #7e7e7e;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.start-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.taskbar-divider {
+    width: 1px;
+    height: 80%;
+    background-color: #7e7e7e;
+    margin: 2px 4px;
+    align-self: center;
+}
+
+.taskbar-time {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    height: 100%;
+    border-top: 1px solid #7e7e7e;
+    border-left: 1px solid #7e7e7e;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 2px;
+    font-size: 12px;
+}
+
+/* Área de trabalho e ícones */
+.desktop {
+    height: calc(100vh - 28px);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80px);
+    grid-auto-rows: 100px;
+    gap: 10px;
+    align-items: start;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+}
+
+.desktop-icon img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 5px;
+}
+
+/* Ajustar espaçamento para ícones maiores */
+.desktop {
+    grid-auto-rows: 120px; /* Aumentando de 100px para 120px */
+  }
+
+.desktop-icon span {
+    color: white;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+    max-width: 80px;
+    word-wrap: break-word;
+}
+
+.desktop-icon.selected span {
+    background-color: #000080;
+}
+
+/* Janela do Windows 95 */
+.window {
+    position: absolute;
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 2px solid #7e7e7e;
+    border-bottom: 2px solid #7e7e7e;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    min-width: 300px;
+    min-height: 200px;
+    display: none;
+    z-index: 100;
+}
+
+.window.active {
+    display: block;
+    z-index: 101;
+}
+
+.window-titlebar {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    background-color: #000080; /* Azul do Windows 95 */
+    color: white;
+    padding: 0 3px;
+    user-select: none;
+}
+
+.active .window-titlebar {
+    background-color: #000080;
+}
+
+.inactive .window-titlebar {
+    background-color: #7e7e7e;
+}
+
+.window-title {
+    flex-grow: 1;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-control {
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #7e7e7e;
+    border-bottom: 1px solid #7e7e7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.window-control:active {
+    border-top: 1px solid #7e7e7e;
+    border-left: 1px solid #7e7e7e;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.window-menubar {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    border-bottom: 1px solid #7e7e7e;
+}
+
+.window-menu-item {
+    padding: 0 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.window-menu-item:hover {
+    background-color: #000080;
+    color: white;
+}
+
+.window-content {
+    padding: 10px;
+    overflow: auto;
+    height: calc(100% - 45px);
+}
+
+/* Estilos específicos para menus */
+.start-menu {
+    position: fixed;
+    bottom: 28px;
+    left: 0;
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 2px solid #7e7e7e;
+    border-bottom: 2px solid #7e7e7e;
+    width: 200px;
+    display: none;
+    z-index: 1001;
+}
+
+.start-menu.active {
+    display: block;
+}
+
+.start-menu-sidebar {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background-color: #7e7e7e;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.start-menu-sidebar-text {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.start-menu-items {
+    margin-left: 30px;
+    padding: 5px 0;
+}
+
+.start-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.start-menu-item:hover {
+    background-color: #000080;
+    color: white;
+}
+
+.start-menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #7e7e7e;
+    margin: 5px 0;
+}
+
+/* Botões do Win95 */
+.win95-button {
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #7e7e7e;
+    border-bottom: 1px solid #7e7e7e;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 5px;
+    outline: 1px solid black;
+}
+
+.win95-button:active {
+    border-top: 1px solid #7e7e7e;
+    border-left: 1px solid #7e7e7e;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+/* Estilos para portfolio específico */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.project-item {
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #7e7e7e;
+    border-bottom: 1px solid #7e7e7e;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    border: 1px solid #7e7e7e;
+}
+
+.project-item-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Estilo para o "My Computer" */
+.my-computer-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-address {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px inset #7e7e7e;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.folder-address span {
+    margin-right: 5px;
+}
+
+.folder-view {
+    border: 1px inset #7e7e7e;
+    background-color: white;
+    flex-grow: 1;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.folder-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.folder-item:hover {
+    background-color: #000080;
+    color: white;
+}
+
+.folder-item img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.folder-item-name {
+    font-size: 12px;
+    max-width: 90px;
+    word-wrap: break-word;
+}
+
+/* Estilo para formulário de contato */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.form-group input, 
+.form-group textarea {
+    border: 1px inset #7e7e7e;
+    background-color: white;
+    padding: 5px;
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Sobre mim - Estilo Notepad */
+.notepad-content {
+    background-color: white;
+    border: 1px inset #7e7e7e;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.4;
+    height: 100%;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+/* Loading screen (boot) */
+.boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    font-family: 'Courier New', monospace;
+}
+
+.boot-screen-logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.boot-messages {
+    width: 80%;
+    max-width: 600px;
+}
+
+.boot-message {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.boot-progress {
+    width: 80%;
+    max-width: 600px;
+    height: 20px;
+    border: 1px solid white;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.boot-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    transition: width 3s ease-in-out;
+}
+
+/* Estilo para links */
+a {
+    color: #000080;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para dialog de Internet Explorer */
+.ie-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ie-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #7e7e7e;
+}
+
+.ie-toolbar-button {
+    padding: 3px 8px;
+    margin-right: 5px;
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #7e7e7e;
+    border-bottom: 1px solid #7e7e7e;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ie-address-bar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #7e7e7e;
+}
+
+.ie-address-label {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.ie-address-input {
+    flex-grow: 1;
+    border: 1px inset #7e7e7e;
+    background-color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.ie-page {
+    flex-grow: 1;
+    background-color: white;
+    border: 1px inset #7e7e7e;
+    padding: 10px;
+    overflow: auto;
+}
+
+.ie-status-bar {
+    padding: 2px 5px;
+    border-top: 1px solid #7e7e7e;
+    font-size: 12px;
+}
+
+/* Estilos da janela de error */
+.error-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c0c0c0;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 2px solid #7e7e7e;
+    border-bottom: 2px solid #7e7e7e;
+    width: 300px;
+    z-index: 2000;
+    display: none;
+}
+
+.error-window.active {
+    display: block;
+}
+
+.error-content {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.error-icon {
+    margin-right: 10px;
+}
+
+.error-message {
+    font-size: 12px;
+}
+
+.error-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .desktop {
+        grid-template-columns: repeat(auto-fill, 70px);
+        grid-auto-rows: 90px;
+    }
+    
+    .desktop-icon {
+        width: 70px;
+    }
+    
+    .window {
+        width: 90% !important;
+        height: 80% !important;
+        top: 10% !important;
+        left: 5% !important;
+    }
+}

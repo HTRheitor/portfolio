@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Win95</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Tela de inicialização -->
+    <div class="boot-screen">
+        <div class="boot-screen-logo">Windows 95</div>
+        <div class="boot-messages">
+            <div class="boot-message">Inicializando sistema...</div>
+            <div class="boot-message">Carregando drivers de vídeo...</div>
+            <div class="boot-message">Carregando Meu Portfólio Win95...</div>
+            <div class="boot-message">Inicializando área de trabalho...</div>
+        </div>
+        <div class="boot-progress">
+            <div class="boot-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Área de trabalho -->
+    <div class="desktop">
+        <!-- Ícones da Área de Trabalho -->
+        <div class="desktop-icon" data-window="my-computer">
+            <img src="images/icons/mycomputer.png" alt="My Computer">
+            <span>Meu Computador</span>
+        </div>
+        
+        <div class="desktop-icon" data-window="my-projects">
+            <img src="images/icons/folders.png" alt="My Projects">
+            <span>Meus Projetos</span>
+        </div>
+        
+        <div class="desktop-icon" data-window="about-me">
+            <img src="images/icons/user.png" alt="About Me">
+            <span>Sobre Mim</span>
+        </div>
+        
+        <div class="desktop-icon" data-window="my-skills">
+            <img src="images/icons/hab.png" alt="My Skills" >
+            <span>Minhas Habilidades</span>
+        </div>
+        
+        <div class="desktop-icon" data-window="contact">
+            <img src="images/icons/contato.png" alt="Contact">
+            <span>Contato</span>
+        </div>
+        
+        <div class="desktop-icon" data-window="internet-explorer">
+            <img src="images/icons/links.png" alt="Internet Explorer">
+            <span>Links Externos</span>
+        </div>
+        
+        <div class="desktop-icon" data-window="recycle-bin">
+            <img src="images/icons/lixeira.png" width="500" height="500" alt="Recycle Bin">
+            <span>Lixeira</span>
+        </div>
+    </div>
+
+    <!-- Janelas -->
+    <!-- Meu Computador -->
+    <div class="window" id="my-computer">
+        <div class="window-titlebar">
+            <div class="window-title">Meu Computador</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <div class="my-computer-view">
+                <div class="folder-address">
+                    <span>Meu Computador</span> (C:)
+                </div>
+                <div class="folder-view">
+                    <div class="folder-item" data-window="my-projects">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/places/folder.png" alt="Projects">
+                        <div class="folder-item-name">Projetos</div>
+                    </div>
+                    <div class="folder-item" data-window="about-me">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/apps/accessories-text-editor.png" alt="About">
+                        <div class="folder-item-name">Sobre.txt</div>
+                    </div>
+                    <div class="folder-item" data-window="my-skills">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/mimetypes/text-x-script.png" alt="Skills">
+                        <div class="folder-item-name">habilidades.exe</div>
+                    </div>
+                    <div class="folder-item" data-window="contact">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/apps/internet-mail.png" alt="Contact">
+                        <div class="folder-item-name">contato.msg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meus Projetos -->
+    <div class="window" id="my-projects">
+        <div class="window-titlebar">
+            <div class="window-title">Meus Projetos</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <div class="my-computer-view">
+                <div class="folder-address">
+                    <span>C:\Meus Projetos</span>
+                </div>
+                <div class="folder-view">
+                    <div class="folder-item" data-window="project-1">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/mimetypes/application-x-executable.png" alt="Project 1">
+                        <div class="folder-item-name">Projeto 1.exe</div>
+                    </div>
+                    <div class="folder-item" data-window="project-2">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/mimetypes/application-x-executable.png" alt="Project 2">
+                        <div class="folder-item-name">Projeto 2.exe</div>
+                    </div>
+                    <div class="folder-item" data-window="project-3">
+                        <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/mimetypes/application-x-executable.png" alt="Project 3">
+                        <div class="folder-item-name">Projeto 3.exe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projeto 1 -->
+    <div class="window" id="project-1">
+        <div class="window-titlebar">
+            <div class="window-title">Projeto 1</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <h3>Projeto 1: Nome do Projeto</h3>
+            <div style="margin: 10px 0;">
+                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
+                    [Imagem do Projeto 1]
+                </div>
+            </div>
+            <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Descrição:</strong> Breve descrição do projeto e seus objetivos principais. Explique os desafios técnicos e as soluções implementadas.</p>
+            <div style="margin-top: 20px;">
+                <button class="win95-button">Visitar Site</button>
+                <button class="win95-button">Ver Código</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projeto 2 -->
+    <div class="window" id="project-2">
+        <div class="window-titlebar">
+            <div class="window-title">Projeto 2</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <h3>Projeto 2: Nome do Projeto</h3>
+            <div style="margin: 10px 0;">
+                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
+                    [Imagem do Projeto 2]
+                </div>
+            </div>
+            <p><strong>Tecnologias:</strong> React, Node.js, MongoDB</p>
+            <p><strong>Descrição:</strong> Breve descrição do projeto e seus objetivos principais. Explique os desafios técnicos e as soluções implementadas.</p>
+            <div style="margin-top: 20px;">
+                <button class="win95-button">Visitar Site</button>
+                <button class="win95-button">Ver Código</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projeto 3 -->
+    <div class="window" id="project-3">
+        <div class="window-titlebar">
+            <div class="window-title">Projeto 3</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <h3>Projeto 3: Nome do Projeto</h3>
+            <div style="margin: 10px 0;">
+                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
+                    [Imagem do Projeto 3]
+                </div>
+            </div>
+            <p><strong>Tecnologias:</strong> Python, Django, PostgreSQL</p>
+            <p><strong>Descrição:</strong> Breve descrição do projeto e seus objetivos principais. Explique os desafios técnicos e as soluções implementadas.</p>
+            <div style="margin-top: 20px;">
+                <button class="win95-button">Visitar Site</button>
+                <button class="win95-button">Ver Código</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobre Mim -->
+    <div class="window" id="about-me">
+        <div class="window-titlebar">
+            <div class="window-title">Sobre Mim - Bloco de Notas</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <div class="notepad-content">
+SOBRE MIM
+==========
+
+Nome: [Seu Nome]
+Profissão: [Sua Profissão]
+Localização: [Sua Cidade, País]
+
+Resumo:
+-------
+Olá! Sou um desenvolvedor apaixonado por tecnologia e design. 
+Minha jornada na programação começou em [ano] e desde então 
+tenho me dedicado a criar soluções criativas e funcionais.
+
+Formação:
+---------
+- [Curso/Faculdade] - [Instituição] ([Ano de Conclusão])
+- [Outros cursos relevantes]
+
+Experiência:
+-----------
+- [Cargo] em [Empresa] ([Período])
+  Responsável por [principais atividades]
+
+- [Cargo anterior] em [Empresa anterior] ([Período])
+  Trabalhei com [principais tecnologias e atividades]
+
+Hobbies:
+--------
+Quando não estou codando, gosto de [seus hobbies e interesses].
+
+Filosofia de Trabalho:
+---------------------
+Acredito que [sua filosofia/abordagem para desenvolvimento 
+e trabalho em geral].
+            </div>
+        </div>
+    </div>
+
+    <!-- Minhas Habilidades -->
+    <div class="window" id="my-skills">
+        <div class="window-titlebar">
+            <div class="window-title">Minhas Habilidades</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <h3>Tecnologias e Ferramentas</h3>
+            <div style="margin: 20px 0;">
+                <p><strong>Linguagens de Programação:</strong></p>
+                <div style="display: flex; margin-top: 5px;">
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            JS
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">JavaScript</div>
+                    </div>
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            PY
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">Python</div>
+                    </div>
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            TS
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">TypeScript</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <p><strong>Front-end:</strong></p>
+                <div style="display: flex; margin-top: 5px;">
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            HTML
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">HTML5</div>
+                    </div>
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            CSS
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">CSS3</div>
+                    </div>
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            REACT
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">React</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <p><strong>Back-end:</strong></p>
+                <div style="display: flex; margin-top: 5px;">
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            NODE
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">Node.js</div>
+                    </div>
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            DJANGO
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">Django</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <p><strong>Bancos de Dados:</strong></p>
+                <div style="display: flex; margin-top: 5px;">
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            SQL
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">MySQL</div>
+                    </div>
+                    <div style="margin-right: 10px; text-align: center;">
+                        <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; padding: 5px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            MONGO
+                        </div>
+                        <div style="font-size: 12px; margin-top: 3px;">MongoDB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contato -->
+    <div class="window" id="contact">
+        <div class="window-titlebar">
+            <div class="window-title">Contato</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <h3>Entre em Contato</h3>
+            <p style="margin: 10px 0;">Preencha o formulário abaixo ou entre em contato através de um dos canais listados.</p>
+            
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message"></textarea>
+                </div>
+                <button class="win95-button">Enviar Mensagem</button>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <p><strong>Outros Canais:</strong></p>
+                <p>Email: seu.email@exemplo.com</p>
+                <p>LinkedIn: linkedin.com/in/seuperfil</p>
+                <p>GitHub: github.com/seuusuario</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Internet Explorer (Links Externos) -->
+    <div class="window" id="internet-explorer">
+        <div class="window-titlebar">
+            <div class="window-title">Internet Explorer - Links Externos</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Favoritos</div>
+            <div class="window-menu-item">Ferramentas</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <div class="ie-content">
+                <div class="ie-toolbar">
+                    <div class="ie-toolbar-button">Voltar</div>
+                    <div class="ie-toolbar-button">Avançar</div>
+                    <div class="ie-toolbar-button">Parar</div>
+                    <div class="ie-toolbar-button">Atualizar</div>
+                    <div class="ie-toolbar-button">Página Inicial</div>
+                </div>
+                <div class="ie-address-bar">
+                    <div class="ie-address-label">Endereço:</div>
+                    <div class="ie-address-input">https://meus-links-externos.com</div>
+                </div>
+                <div class="ie-page">
+                    <h3>Links Externos</h3>
+                    <div style="margin: 20px 0;">
+                        <p><strong>Redes Sociais:</strong></p>
+                        <div style="margin: 10px 0;">
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; margin-right: 5px;">
+                                    LI
+                                </div>
+                                <a href="#">LinkedIn</a>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; margin-right: 5px;">
+                                    GH
+                                </div>
+                                <a href="#">GitHub</a>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; margin-right: 5px;">
+                                    TW
+                                </div>
+                                <a href="#">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 20px 0;">
+                        <p><strong>Portfólio e Blog:</strong></p>
+                        <div style="margin: 10px 0;">
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; margin-right: 5px;">
+                                    BL
+                                </div>
+                                <a href="#">Meu Blog Pessoal</a>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                                <div style="background-color: #f5f5f5; border: 1px solid #7e7e7e; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; margin-right: 5px;">
+                                    MD
+                                </div>
+                                <a href="#">Medium</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ie-status-bar">
+                    Pronto
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lixeira -->
+    <div class="window" id="recycle-bin">
+        <div class="window-titlebar">
+            <div class="window-title">Lixeira</div>
+            <div class="window-controls">
+                <div class="window-control minimize">_</div>
+                <div class="window-control maximize">□</div>
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="window-menubar">
+            <div class="window-menu-item">Arquivo</div>
+            <div class="window-menu-item">Editar</div>
+            <div class="window-menu-item">Exibir</div>
+            <div class="window-menu-item">Ajuda</div>
+        </div>
+        <div class="window-content">
+            <div style="padding: 20px; text-align: center;">
+                <div style="margin-bottom: 20px;">
+                    <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/48x48/places/user-trash-full.png" alt="Recycle Bin" style="width: 48px; height: 48px;">
+                </div>
+                <h3>Lixeira Vazia</h3>
+                <p>Não há arquivos na lixeira. Tente deletar algo primeiro!</p>
+                <div style="margin-top: 20px;">
+                    <button class="win95-button">Esvaziar Lixeira</button>
+                    <button class="win95-button">Restaurar Todos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Janela de erro -->
+    <div class="error-window" id="error-window">
+        <div class="window-titlebar">
+            <div class="window-title">Erro</div>
+            <div class="window-controls">
+                <div class="window-control close">X</div>
+            </div>
+        </div>
+        <div class="error-content">
+            <div class="error-icon">❌</div>
+            <div class="error-message">Ocorreu um erro. Esta função ainda não foi implementada.</div>
+        </div>
+        <div class="error-buttons">
+            <button class="win95-button" id="error-ok">OK</button>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="start-menu">
+        <div class="start-menu-sidebar">
+            <div class="start-menu-sidebar-text">Windows 95</div>
+        </div>
+        <div class="start-menu-items">
+            <div class="start-menu-item" data-window="my-computer">
+                <img src="images/icons/mycomputer.png" alt="My Computer">
+                Meu Computador
+            </div>
+            <div class="start-menu-item" data-window="my-projects">
+                <img src="images/icons/projetos2.png" alt="My Projects">
+                Meus Projetos
+            </div>
+            <div class="start-menu-item" data-window="about-me">
+                <img src="images/icons/user.png" alt="About Me">
+                Sobre Mim
+            </div>
+            <div class="start-menu-item" data-window="contact">
+                <img src="images/icons/user.png" alt="Contact">
+                Contato
+            </div>
+            <div class="divider"></div>
+            <div class="start-menu-item" id="shutdown">
+                <img src="images/icons/user.png" alt="Shutdown">
+                Desligar
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de tarefas -->
+    <div class="taskbar">
+        <div class="start-button" id="start-button">
+            <img src="https://cdn.jsdelivr.net/gh/pkkulhari/icons.js/dist/16x16/places/start-here.png" alt="Start">
+            Iniciar
+        </div>
+        <div class="taskbar-divider"></div>
+        <div class="taskbar-time" id="taskbar-time">12:00</div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/features.js"></script>
+</body>
+</html>
